@@ -141,6 +141,16 @@ const projectsData = [
   },
   {
     id: 3,
+    title: { ru: 'Коктейли в ресторане Grut', en: 'Grut Restaurant Cocktails' },
+    description: { ru: 'Лендинг: коктейльная карта ресторана Grut, одна цена 999₽.', en: 'Landing: Grut restaurant cocktail menu, single price 999₽.' },
+    image: 'https://placehold.co/600x340/1a1a1a/ffffff?text=Grut+Cocktails',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['javascript'],
+    linkCode: '#',
+    linkDemo: 'http://grut.site/',
+  },
+  {
+    id: 4,
     title: { ru: 'Калькулятор ИМТ', en: 'BMI Calculator' },
     description: { ru: 'Индекс массы тела: расчёт по весу и росту, шкала ИМТ.', en: 'Body mass index calculator: weight and height, BMI scale.' },
     image: 'https://placehold.co/600x340/10b981/ffffff?text=BMI',
@@ -150,7 +160,7 @@ const projectsData = [
     linkDemo: 'https://lrg1763.github.io/BmiWeb/',
   },
   {
-    id: 4,
+    id: 5,
     title: { ru: 'Barterswap', en: 'Barterswap' },
     description: { ru: 'Платформа бартерного обмена навыками и услугами: профили, поиск, чат, отзывы.', en: 'Barter exchange platform for skills and services: profiles, search, chat, reviews.' },
     image: 'https://placehold.co/600x340/8b5cf6/ffffff?text=Barterswap',
@@ -160,7 +170,7 @@ const projectsData = [
     linkDemo: 'https://lrg1763.github.io/BarterswapWeb/',
   },
   {
-    id: 5,
+    id: 6,
     title: { ru: 'Крестики-нолики', en: 'Tic-tac-toe' },
     description: { ru: 'Многопользовательская игра по ссылке: создание комнаты, ожидание второго игрока.', en: 'Multiplayer game via link: create room, wait for second player.' },
     image: 'https://placehold.co/600x340/f59e0b/ffffff?text=Tic-tac-toe',
