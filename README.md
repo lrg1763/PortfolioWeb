@@ -53,48 +53,6 @@ python3 -m http.server 5500
 
 ---
 
-## Как настроить под себя
-
-### Проекты
-
-В **app.js** отредактируй массив **projectsData**. Пример элемента:
-
-```js
-{
-  id: 7,
-  title: { ru: 'Название', en: 'Title' },
-  description: { ru: 'Описание', en: 'Description' },
-  image: 'https://...',   // fallback, если нет linkDemo или iframe блокируется
-  tech: ['React', 'Node.js'],
-  tags: ['react', 'node'],
-  linkCode: 'https://github.com/username/repo',
-  linkDemo: 'https://username.github.io/repo/',
-}
-```
-
-- **linkDemo** — ссылка на живой сайт; в карточке показывается превью (iframe). Для `http://` на странице с `https://` превью может блокироваться браузером.
-- **linkCode** — репозиторий на GitHub.
-
-### Контакты и соцсети
-
-В **index.html** в блоке «Контакты» замени:
-
-- `hello@example.com` на свой email;
-- `https://github.com`, `https://linkedin.com`, `https://t.me/your_username`, ссылку на hh.ru — на свои профили.
-
-При необходимости подправь тексты в **app.js** в объекте **translations** (в т.ч. про mail.ru).
-
-### Резюме
-
-Положи **resume.pdf** в папку **assets/** — кнопка «Скачать резюме» будет вести на этот файл.
-
-### Шрифты
-
-- **Текст:** файлы в **fonts/** (ONY Semimono Beta). Подключение в `<style>` в **index.html**.
-- **Заголовки:** Aptos (системный), резерв — Segoe UI, system-ui. Настраивается в `tailwind.config` в **index.html**.
-
----
-
 ## Лицензия
 
 Свободное использование для личного портфолио.
