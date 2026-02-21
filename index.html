@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Максим — Full-Stack разработчик</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Шрифты из проекта: ONY Semimono Beta -->
+  <style>
+    @font-face {
+      font-family: 'ONY Semimono Beta';
+      src: url('fonts/ONYSemimonoBeta-Regular.efd5f52.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'ONY Semimono Beta';
+      src: url('fonts/ONYSemimonoBeta-Black.d1984df.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['ONY Semimono Beta', 'GT Pressura Pro', 'Manrope', 'system-ui', 'sans-serif'],
+            heading: ['Aptos', 'Segoe UI', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'gradient': 'gradient 8s ease infinite',
+          },
+          keyframes: {
+            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+            gradient: { '0%, 100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased">
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-18">
+        <div class="w-8 md:w-0"></div>
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center gap-8 flex-1 justify-center">
+          <a href="#hero" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" data-i18n="nav.home">Главная</a>
+          <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" data-i18n="nav.about">Обо мне</a>
+          <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" data-i18n="nav.projects">Проекты</a>
+          <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" data-i18n="nav.contact">Контакты</a>
+        </div>
+        <!-- Mobile: burger -->
+        <div class="flex md:hidden items-center justify-end flex-1">
+          <button type="button" id="burger" aria-label="Меню" class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-200 dark:border-gray-800">
+        <div class="flex flex-col gap-2 pt-4">
+          <a href="#hero" class="nav-mobile-link py-2" data-i18n="nav.home">Главная</a>
+          <a href="#about" class="nav-mobile-link py-2" data-i18n="nav.about">Обо мне</a>
+          <a href="#projects" class="nav-mobile-link py-2" data-i18n="nav.projects">Проекты</a>
+          <a href="#contact" class="nav-mobile-link py-2" data-i18n="nav.contact">Контакты</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gray-50 dark:bg-gray-900">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100vw,800px)] h-[min(80vh,600px)] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-400/30 via-violet-500/15 to-transparent dark:from-purple-500/25 dark:via-violet-600/15 dark:to-transparent rounded-full blur-2xl"></div>
+      <div class="absolute top-20 left-10 w-80 h-80 bg-purple-400 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-soft-light opacity-50 animate-float" style="filter: blur(80px);"></div>
+      <div class="absolute bottom-20 right-10 w-80 h-80 bg-violet-400 dark:bg-violet-600 rounded-full mix-blend-multiply dark:mix-blend-soft-light opacity-50 animate-float" style="filter: blur(80px); animation-delay: -3s;"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 reveal" data-i18n="hero.title">Привет, я Максим — full-stack разработчик</h1>
+        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 reveal" data-i18n="hero.subtitle">Специализация: React, Node.js, TypeScript, современный веб и серверная разработка</p>
+        <div class="flex flex-wrap gap-4 justify-center reveal">
+          <a href="#contact" class="inline-flex items-center px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg hover:shadow-xl transition-all"> <span data-i18n="hero.contact">Связаться</span></a>
+          <a href="#projects" class="inline-flex items-center px-6 py-3 rounded-xl bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 hover:border-indigo-500 dark:hover:border-indigo-400 text-gray-900 dark:text-white font-medium transition-all"><span data-i18n="hero.works">Просмотреть работы</span></a>
+          <a href="assets/resume.pdf" download class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 font-medium transition-colors"><i class="fas fa-download"></i> <span data-i18n="hero.resume">Скачать резюме</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="min-h-screen py-20 md:py-24 flex flex-col justify-center bg-white dark:bg-gray-800/40">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl font-bold text-gray-900 dark:text-white mb-10 reveal" data-i18n="about.title">Обо мне</h2>
+        <div class="reveal space-y-5 text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p data-i18n="about.p1">Более 5 лет опыта в веб-разработке. Создаю полноценные приложения от идеи до продакшена: фронтенд на React и TypeScript, бэкенд на Node.js, базы данных и DevOps.</p>
+          <p data-i18n="about.p2">Образование: компьютерные науки и самообразование. Уделяю внимание чистоте кода, тестам и удобству пользователей.</p>
+          <p data-i18n="about.p3">Работаю в команде и самостоятельно. Открыт к новым проектам и интересным задачам.</p>
+        </div>
+        <div class="reveal mt-8 pt-4">
+          <p class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-5" data-i18n="about.stack">Стек</p>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-wrap justify-center gap-2 items-center">
+              <span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium w-20" data-i18n="skills.frontend">Frontend</span>
+              <img src="https://skillicons.dev/icons?i=react" alt="React" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="React" />
+              <img src="https://skillicons.dev/icons?i=vue" alt="Vue" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="Vue" />
+              <img src="https://skillicons.dev/icons?i=html" alt="HTML" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="HTML" />
+              <img src="https://skillicons.dev/icons?i=css" alt="CSS" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="CSS" />
+              <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="JavaScript" />
+              <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="TypeScript" />
+            </div>
+            <div class="flex flex-wrap justify-center gap-2 items-center">
+              <span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium w-20" data-i18n="skills.backend">Backend</span>
+              <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="Node.js" />
+              <img src="https://skillicons.dev/icons?i=py" alt="Python" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="Python" />
+              <img src="https://skillicons.dev/icons?i=php" alt="PHP" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="PHP" />
+              <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="PostgreSQL" />
+            </div>
+            <div class="flex flex-wrap justify-center gap-2 items-center">
+              <span class="text-sm text-indigo-600 dark:text-indigo-400 font-medium w-20" data-i18n="skills.tools">Инструменты</span>
+              <img src="https://skillicons.dev/icons?i=git" alt="Git" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="Git" />
+              <img src="https://skillicons.dev/icons?i=docker" alt="Docker" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="Docker" />
+              <img src="https://skillicons.dev/icons?i=linux" alt="Linux" class="w-7 h-7 opacity-90 hover:opacity-100 transition-opacity" title="Linux" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="min-h-[100vh] py-20 md:py-24 flex flex-col justify-center bg-gray-50 dark:bg-gray-900" style="min-height: 100vh;">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-10 reveal" data-i18n="projects.title">Проекты</h2>
+        <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="min-h-screen py-20 md:py-24 flex flex-col justify-center bg-gray-200 dark:bg-gray-950">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-4 reveal" data-i18n="contact.title">Контакты</h2>
+        <p class="text-center text-gray-600 dark:text-gray-400 mb-2 reveal" data-i18n="contact.subtitle">Напишите мне — с радостью отвечу</p>
+        <p class="text-center text-sm text-gray-500 dark:text-gray-500 mb-8 reveal" data-i18n="contact.mailru">Письмо придёт на почту @mail.ru</p>
+        <div id="form-message" class="hidden mb-4 p-4 rounded-xl bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200" data-i18n="contact.success">Спасибо! Сообщение отправлено (демо).</div>
+        <form id="contact-form" class="space-y-4 reveal">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1" data-i18n="contact.name">Имя</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition" data-i18n-placeholder="contact.namePlaceholder" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1" data-i18n="contact.email">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition" data-i18n-placeholder="contact.emailPlaceholder" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-1" data-i18n="contact.message">Сообщение</label>
+            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition resize-none" data-i18n-placeholder="contact.messagePlaceholder"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors" data-i18n="contact.submit">Отправить</button>
+        </form>
+        <div class="mt-10 text-center">
+          <a href="mailto:hello@example.com" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">hello@example.com</a>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-4 mb-3" data-i18n="contact.socials">Соцсети и профили</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-200" aria-label="GitHub"><i class="fab fa-github text-xl"></i> GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-200" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i> LinkedIn</a>
+            <a href="https://t.me/your_username" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-200" aria-label="Telegram"><i class="fab fa-telegram text-xl"></i> Telegram</a>
+            <a href="https://hh.ru/applicant/resume/list" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-gray-700 dark:text-gray-200" aria-label="hh.ru">hh.ru</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
