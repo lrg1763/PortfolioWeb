@@ -24,9 +24,10 @@ const translations = {
     about: {
       title: 'Обо мне',
       stack: 'Стек',
-      p1: 'Более 5 лет опыта в веб-разработке. Создаю полноценные приложения от идеи до продакшена: фронтенд на React и TypeScript, бэкенд на Node.js, базы данных и DevOps.',
-      p2: 'Образование: компьютерные науки и самообразование. Уделяю внимание чистоте кода, тестам и удобству пользователей.',
-      p3: 'Работаю в команде и самостоятельно. Открыт к новым проектам и интересным задачам.',
+      p1: 'Студент 4 курса РТУ МИРЕА по направлению «Фуллстак-разработка». Готовлюсь к работе в веб-разработке: фронтенд, бэкенд, базы данных, современный стек.',
+      p2: 'Обучаюсь на практике: делаю пет-проекты и выполняю учебные задания и проекты в университете.',
+      p3: 'По технологиям из стека ниже проходил дополнительные курсы и продолжаю углублять знания.',
+      p4: 'Постоянно учусь, читаю профессиональную литературу и статьи, улучшаю навыки — хочу расти как разработчик и быть полезным в команде.',
     },
     projects: {
       title: 'Проекты',
@@ -78,9 +79,10 @@ const translations = {
     about: {
       title: 'About me',
       stack: 'Stack',
-      p1: 'Over 5 years of experience in web development. I build full-cycle applications from idea to production: frontend with React and TypeScript, backend with Node.js, databases and DevOps.',
-      p2: 'Background: computer science and self-education. I care about clean code, testing and user experience.',
-      p3: 'I work in teams and solo. Open to new projects and interesting challenges.',
+      p1: '4th year student at RTU MIREA, majoring in Full-Stack Development. Focusing on frontend, backend, databases, and modern web technologies.',
+      p2: 'Learning by doing: building pet projects and completing university assignments and team projects.',
+      p3: 'Completed courses in the technologies listed below and keep deepening my skills.',
+      p4: 'I keep learning, read professional resources, and work on improving my skills — I want to grow as a developer and contribute to a team.',
     },
     projects: {
       title: 'Projects',
